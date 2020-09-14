@@ -20,5 +20,12 @@ public class MommifierTest {
         assertEquals(emptyString, mommifier.getMommifierString(emptyString));
     }
 
+    @Test
+    public void should_return_itself_when_number_of_vowels_are_not_more_than_thirty_percent_of_string_length() throws StringIsNullException {
+        Mommifier mommifier = new Mommifier();
+        String vowelsNotThirtyPercent = "give";
+        assertEquals(vowelsNotThirtyPercent, mommifier.getMommifierString(vowelsNotThirtyPercent));
+    }
+
 
 }
