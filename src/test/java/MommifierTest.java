@@ -34,5 +34,11 @@ public class MommifierTest {
         assertEquals(vowelsNotThirtyPercentAndNotContinuousVowels, mommifier.getMommifierString(vowelsNotThirtyPercentAndNotContinuousVowels));
     }
 
+    @Test
+    public void should_return_itself_when_number_of_vowels_are_more_than_thirty_percent_and_include_continuous_vowels() throws StringIsNullException {
+        Mommifier mommifier = new Mommifier();
+        String continuousVowelsString = "rooom";
+        assertEquals("romommyomommyom", mommifier.getMommifierString(continuousVowelsString));
+    }
 
 }
