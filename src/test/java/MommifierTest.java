@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 
@@ -11,4 +12,13 @@ public class MommifierTest {
             mommifier.getMommifierString(null);
         });
     }
+
+    @Test
+    public void should_return_itself_when_string_is_empty() throws StringIsNullException {
+        Mommifier mommifier = new Mommifier();
+        String emptyString = "";
+        assertEquals(emptyString, mommifier.getMommifierString(emptyString));
+    }
+
+
 }
